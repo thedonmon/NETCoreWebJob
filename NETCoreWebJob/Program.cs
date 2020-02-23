@@ -34,6 +34,9 @@ namespace NETCoreWebJob
                 string appInsightsKey = Configuration["APPINSIGHTS_INSTRUMENTATIONKEY"];
                 if (!string.IsNullOrEmpty(appInsightsKey))
                 {
+                    logging.ClearProviders();
+                    logging.AddConfiguration(Configuration);
+                    
                     // This uses the options callback to explicitly set the instrumentation key.
                     logging.AddApplicationInsights(appInsightsKey)
                            .SetMinimumLevel(LogLevel.Information);
@@ -44,6 +47,7 @@ namespace NETCoreWebJob
             var tokenSource = new CancellationTokenSource();
             CancellationToken ct = tokenSource.Token;
             var host = builder.Build();
+           
             using (host)
             {
                 await host.RunAsync(ct);
@@ -69,7 +73,8 @@ namespace NETCoreWebJob
             services.AddSingleton(Configuration);
             services.AddScoped<Functions, Functions>();
             services.AddScoped<IDoWork, DoWork>();
-            services.AddScoped<IMyDBContext>((o) => {
+            services.AddScoped<IMyDBContext>((o) =>
+            {
                 var options = new DbContextOptionsBuilder<MyDBContext>().UseSqlServer(dbConn).Options;
                 return new MyDBContext(options);
             });

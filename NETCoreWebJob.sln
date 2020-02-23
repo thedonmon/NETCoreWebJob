@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29728.190
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NETCoreWebJob", "NETCoreWebJob\NETCoreWebJob.csproj", "{2B65EBAF-D2F8-415B-9EBB-5C080646C68B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NETCoreWebJob", "NETCoreWebJob\NETCoreWebJob.csproj", "{2B65EBAF-D2F8-415B-9EBB-5C080646C68B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NETCoreWebJob.Domain", "NETCoreWebJob.Domain\NETCoreWebJob.Domain.csproj", "{18FB90EC-6A07-47EF-820D-3E9E87C76A3B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NETCoreWebJob.Domain", "NETCoreWebJob.Domain\NETCoreWebJob.Domain.csproj", "{18FB90EC-6A07-47EF-820D-3E9E87C76A3B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyFrameworkWebjob", "MyFrameworkWebjob\MyFrameworkWebjob.csproj", "{7BA3782F-F4F2-48F9-83E7-E4A7A326BF5F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{18FB90EC-6A07-47EF-820D-3E9E87C76A3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{18FB90EC-6A07-47EF-820D-3E9E87C76A3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{18FB90EC-6A07-47EF-820D-3E9E87C76A3B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7BA3782F-F4F2-48F9-83E7-E4A7A326BF5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7BA3782F-F4F2-48F9-83E7-E4A7A326BF5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7BA3782F-F4F2-48F9-83E7-E4A7A326BF5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7BA3782F-F4F2-48F9-83E7-E4A7A326BF5F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

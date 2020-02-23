@@ -13,7 +13,7 @@ namespace NETCoreWebJob.Domain
         public DbSet<MyDBModel> MyTableName { get; set; }
         public MyDBContext(DbContextOptions<MyDBContext> options): base(options)
         {
-
+            
         }
         public async Task<MyDBModel> GetById(int id)
         {
