@@ -41,7 +41,7 @@ namespace NETCoreWebJob
                     ContentType = "application/json;charset=utf-8"
                 };
                 await queueCollector.AddAsync(messageToQueue, cancellationToken).ConfigureAwait(false);
-                queueCollector.FlushAsync(cancellationToken);
+                _ = queueCollector.FlushAsync(cancellationToken);
             }
 
 
